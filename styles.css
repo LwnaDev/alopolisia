@@ -1,0 +1,289 @@
+/*
+ * If you have conscience, you should not edit or delete name of developer.
+ * Backend by NexDrak | Frontend by anuwat | Media Artist Kitra
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body{
+  background-image: url("./img/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* nav bar */
+.header, .logo-text, .button-box, .button-box ul, .button-box li, .button-box a, .sv-name-and-menu{
+  aborder: 1px solid red;
+}
+.header{
+  background-color: #1955b5;
+  padding: 6px 0px;
+  position: fixed;
+  width: 100%;
+  opacity: 1;
+  z-index: 999;
+}
+.header:hover{
+  opacity: 0.9;
+}
+@media (max-width:1300px){
+  .header{
+    padding: 0px 0px;
+  }
+}
+.sv-name-and-menu{
+  padding: 16px;
+  display: inline-block;
+}
+@media (max-width:1300px){
+  .sv-name-and-menu{
+    display: block;
+  }
+}
+.server-name, .server-name:hover{
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+@media (max-width:1300px){
+  .server-name{
+    font-size: 18px;
+  }
+}
+.toggle{
+  padding: 0px;
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: none;
+}
+@media (max-width:1300px){
+  .toggle{
+    display: inline-block;
+    float: right;
+  }
+}
+.button-box {
+  float: right;
+  margin-right: 20px;
+}
+@media (max-width:1300px){
+  .button-box{
+    margin-right: 0px;
+  }
+}
+.button-box ul{
+  list-style: none;
+}
+.button-box li{
+  float: left;
+  padding: 15px;
+  text-align: center;
+}
+.button-box a, .button-box a:hover, .button-box a:focus{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  padding: 4px;
+}
+@media (max-width:1300px) {
+  .button-box{
+    display: none;
+  }
+  .button-box{
+    float: none;
+  }
+  .button-box ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .button-box li{
+    display: block;
+    float: none;
+  }
+  .active{
+    display: block;
+  }
+}
+
+/* background */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.black{
+  background-color: black;
+  opacity: 0.3;
+  width: 1000px;
+  height: 100vh;
+}
+.bg{
+  width: 1000px;
+}
+@media all and (max-width:1100px) {
+  .black, .bg{
+    width: 90%;
+  }
+}
+.all{
+  color: #d4d4d4;
+  text-align: center;
+  text-transform: uppercase;
+}
+.all hr{
+  background-color: #fff;
+  margin: 10px auto;
+  width: 80%;
+}
+.all p{
+  color: #c4c0c0;
+  text-transform: none;
+  width: 85%;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.icon img{
+  display: none;
+  margin: 0 auto;
+}
+@media all and (max-width:500px) {
+  .icon img{
+    display: block;
+  }
+}
+.logo img{
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 10px auto;
+}
+@media all and (max-width:500px) {
+  .logo img{
+    display: none;
+  }
+}
+.info_and_status{
+  padding: 0 10px;
+  font-family: 'Inconsolata', monospace;
+}
+#status{
+  font-size: 32px;
+}
+#sv_ip{
+  font-weight: bold;
+}
+.info_and_status h1{
+  font-size: 35px;
+  margin: 6px 0;
+}
+.info_and_status h2{
+  font-size: 25px;
+  margin: 3px 0;
+}
+.info_and_status h3{
+  font-size: 25px;
+  margin: 3px 0;
+}
+.info_and_status a, .info_and_status a:hover{
+  color: #d4d4d4;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30% 0 30% 0;
+  background-color: #1955b5;
+  max-width: 500px;
+  display: block;
+  margin: 10px auto;
+  padding: 3px 0;
+  animation: jump 2s infinite;
+
+}
+.info_and_status a:hover{
+  background-color: #174999;
+}
+@keyframes jump {
+  0%{
+    opacity: 0.5;
+    box-shadow: 0 3px 8px 1px black;
+    transform: scale(0.9);
+    letter-spacing: 1px;
+  }
+  50%{
+    opacity: 0.9;
+    box-shadow: 0 3px 8px 1px #1955b5;
+    transform: scale(1);
+    letter-spacing: -1px;
+  }
+  100%{
+    opacity: 0.5;
+    box-shadow: 0 3px 8px 1px black;
+    transform: scale(0.9);
+    letter-spacing: 1px;
+  }
+}
+@media all and (max-width:650px) {
+  .info_and_statusa a{
+    width: 90%;
+  }
+}
+@media all and (max-width:500px) {
+  #status{
+    font-size: 23px;
+  }
+  .info_and_status h1{
+    font-size: 25px;
+  }
+  .info_and_status h2{
+    font-size: 18px;
+  }
+  .info_and_status h3{
+    font-size: 18px;
+  }
+  .info_and_status a, .info_and_status a:hover{
+    font-size: 18px;
+  }
+}
+
+/* footer */
+footer{
+  background-color: #1955b5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.9;
+  padding: 10px;
+}
+footer:hover{
+  opacity: 1;
+}
+footer a, footer a:hover{
+  color:red;
+  text-decoration: none;
+}
+.designed{
+  color:#fff;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.designed a{
+  border-bottom: 1px solid red;
+}

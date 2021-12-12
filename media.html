@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Website name | ชื่อเว็บไซต์ -->
+    <title>ACERCA DE NOSOTROS | ALO POLISIA</title>
+    <!-- Website icon | ไอคอนเว็บไซต์ -->
+    <!-- href="https://api.mcsrvstat.us/icon/ip-server-you > -->
+    <!-- href="https://api.mcsrvstat.us/icon/ใส่ไอพีเซิร์ฟเวอร์ > -->
+    <link rel="icon" href="https://api.mcsrvstat.us/icon/78.46.63.210:32883">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+    /* If you not understand, do not fix | หากไม่เข้าใจ ไม่แนะนำให้แก้ไข */
+    $(document).ready(function(){
+      $('.menu').click(function(){
+        $('.button-box').toggleClass('active');
+      })
+    })
+        /* For this box, edit only ip. | สำหรับช่องนี้แก้ไขเฉพาะ ip */
+    /* example | ตัวอย่าง  edit > (let url = "hypixel.net";) to (let url = "ip address";) */
+    let url = "alopolisia.fmc.host";
+    $(document).ready(() => {
+      $.getJSON("https://api.mcsrvstat.us/1/78.46.63.210:32883" + url, (status) => {
+          if (status.debug.ping) {
+              $("#motd").append(status.motd.raw);
+              $("#status").append("online");
+              $("#version").append(status.version);
+              $("#players_num").append(status.players.online + "/" + status.players.max)
+              $.each(status.players.list, function (index, player) {
+                  $("#players_list").append("<li>" + player + "</li>")
+              });
+          } else {
+              $("#motd").append(status.hostname);
+              $("#status").append("offline");
+              $("#version").hide();
+              $("#players_num").hide();
+          }
+          $("body").fadeIn(2000);
+      });
+    });
+    </script>
+  </head>
+  <body>
+
+<!-- Navigation bar | แถบนำทาง -->
+<div class="header">
+  <div class="sv-name-and-menu">
+    <a class="server-name" href="./index.html">ALO POLISIA</a>
+    <a class="toggle menu" style="color:#fff;">MENU</a>
+  </div>
+
+  <div class="button-box">
+    <ul>
+      <li><a href="tienda.html">TIENDA</a></li>
+      <li><a href="https://discord.gg/z925nwa">DISCORD</a></li>
+      <li><a href="https://soundcloud.com/nexdrak">Donar</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- background | พื้นหลัง, ภาพพื้นหลัง -->
+<div class="black centered"></div>
+<div class="bg centered">
+  <div class="container">
+   <div class="row">
+
+     <div class="col-sm-12 all">
+
+       <!-- Server icon | ไอคอน เซิร์ฟเวอร์ -->
+       <div class="icon">
+         <img src="https://api.mcsrvstat.us/icon/78.46.63.210:32883" alt="errors">
+       </div>
+
+       <!-- Logo | โลโก้ -->
+       <div class="logo">
+        <img src="./img/logo.png" alt="errors">
+       </div>
+
+       <!-- Information and status | ข้อมูลและสถานะ -->
+       <div class="info_and_status">
+         <h1><span id="sv_ip">ALOPOLISIA.FMC.HOST</span><br><span id="status">status: </span></h1>
+         <h2 id="players_num">Jugadores: </h2>
+         <h3 id="version">Versión: MC </h3>
+         <a href="#Set-link-ตั้งค่าลิงก์">ENTRAR</a>
+       </div>
+       <hr>
+       <p>Alo Polisia es un servidor del popular juego Minecraft, su nombre 'Alo Polisia' proviene de un error en la sintaxis de la frase 'Hola, Policia', en un inicio el servidor fue parte de una comunidad de jugadores anarquica, su creador... <a href="historia.html" target="_blank">Saber mas. ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎</a> </p>
+    </div>
+
+  </div>
+ </div>
+</div>
+
+<!-- If you have conscience, you should not edit or delete name of developer. -->
+<!-- หากคุณมีมโนธรรม คุณไม่ควรแก้ไขหรือลบชื่อผู้พัฒนา -->
+<footer>
+  <div class="designed">POWERED BY <a href="https://nexdrak.bandcamp.com" target="_blank">NexDrak</a></div>
+</footer>
+
+  </body>
+</html>
